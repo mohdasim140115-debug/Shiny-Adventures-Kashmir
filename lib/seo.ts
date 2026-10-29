@@ -63,6 +63,8 @@ export function organizationJsonLd() {
           telephone: p.e164,
           contactType: "customer service",
         })),
+        // Instagram and Facebook profiles; the Google link is a share redirect, so it is left out.
+        sameAs: business.social.filter((s) => s.name !== "Google").map((s) => s.href),
         areaServed: business.areaServed.map((name) => ({ "@type": "Place", name: `${name}, Kashmir` })),
       },
       {

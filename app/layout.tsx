@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import { AnalyticsListener, GoogleTagManager } from "@/components/analytics";
+import { EnquiryPopup } from "@/components/enquiry-popup";
 import { FloatingContact } from "@/components/floating-contact";
 import { JsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="main">{children}</main>
         <SiteFooter />
         <FloatingContact />
+        <EnquiryPopup />
         <JsonLd data={organizationJsonLd()} />
         <AnalyticsListener />
         <GoogleTagManager id={gtmId} />

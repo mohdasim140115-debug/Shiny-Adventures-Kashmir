@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { destinations } from "@/data/destinations";
 import { packages } from "@/data/packages";
-import { business, navLinks } from "@/lib/site";
+import { business, madeBy, navLinks } from "@/lib/site";
 import { ContactList } from "./contact-list";
 import { Snowfall } from "./snowfall";
 import { Logo } from "./logo";
+import { SocialLinks } from "./social-links";
 
 export function SiteFooter() {
   return (
@@ -17,6 +18,8 @@ export function SiteFooter() {
           <p className="mt-5 max-w-xs text-sm leading-relaxed">
             A Kashmir travel agency based in Tangmarg, near Gulmarg, planning customised tours across the valley.
           </p>
+          <p className="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-lime-400">Follow us</p>
+          <SocialLinks className="mt-3" />
         </div>
 
         <nav aria-label="Destinations">
@@ -55,6 +58,13 @@ export function SiteFooter() {
         <div className="container-x flex flex-col gap-4 py-6 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
           <p>
             © {new Date().getFullYear()} {business.name}. All rights reserved.
+            <span className="mx-2 text-white/30" aria-hidden>
+              |
+            </span>
+            Prepared by{" "}
+            <a href={madeBy.href} target="_blank" rel="noopener" className="font-semibold text-white/85 underline decoration-white/30 underline-offset-4 hover:text-lime-400">
+              {madeBy.name}
+            </a>
           </p>
           <ul className="flex flex-wrap gap-x-5 gap-y-2">
             {navLinks.map((l) => (

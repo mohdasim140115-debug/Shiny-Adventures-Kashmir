@@ -43,6 +43,12 @@ export const business = {
     height: 1447,
     alt: "Shiny Adventure Tour & Travels logo – crossed lime-green skis over a mountain sketch",
   },
+  /** Official profiles supplied by the owner. */
+  social: [
+    { name: "Google", label: "Find us on Google", href: "https://share.google/GELqtMUuTEI4Rbdrg" },
+    { name: "Instagram", label: "Follow us on Instagram", href: "https://www.instagram.com/shinyadventureskashmir_/" },
+    { name: "Facebook", label: "Like us on Facebook", href: "https://www.facebook.com/share/1DvVEAKfny/" },
+  ],
   areaServed: ["Srinagar", "Gulmarg", "Pahalgam", "Sonamarg", "Doodhpathri", "Gurez Valley"],
 } as const;
 
@@ -57,6 +63,9 @@ export function whatsappLink(message?: string) {
   const base = `https://wa.me/${business.whatsapp}`;
   return message ? `${base}?text=${encodeURIComponent(message)}` : base;
 }
+
+/** Website credit shown in the footer. */
+export const madeBy = { name: "DeenX Consultancy", href: "https://deenxconsultancy.com/" };
 
 export const navLinks = [
   { href: "/", label: "Home" },

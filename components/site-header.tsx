@@ -5,6 +5,7 @@ import { trackAttrs } from "@/lib/analytics";
 import { business, whatsappLink } from "@/lib/site";
 import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "./icons";
 import { Logo } from "./logo";
+import { SocialLinks } from "./social-links";
 import { MobileNav } from "./mobile-nav";
 import { NavLink } from "./nav-link";
 
@@ -16,6 +17,7 @@ function TopBar() {
           <PinIcon className="size-4 shrink-0 text-lime-400" />
           <span className="truncate">{business.address.display}</span>
         </p>
+        <div className="flex shrink-0 items-center gap-5">
         <ul className="hidden items-center gap-5 md:flex">
           {business.phones.map((p) => (
             <li key={p.e164}>
@@ -35,6 +37,8 @@ function TopBar() {
             </a>
           </li>
         </ul>
+        <SocialLinks size="sm" />
+        </div>
       </div>
     </div>
   );
