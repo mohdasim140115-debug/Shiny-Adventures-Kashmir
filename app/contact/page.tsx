@@ -8,7 +8,7 @@ import { business } from "@/lib/site";
 export const metadata = pageMetadata({
   title: "Contact Shiny Adventures Kashmir | Request a Tour Quotation",
   description:
-    "Contact Shiny Adventures Kashmir in Tangmarg, Gulmarg. Call +91 9186122235 or +91 9596566858, 9622566858, email, or request a Kashmir tour quotation on WhatsApp.",
+    "Contact Shiny Adventures Kashmir in Tangmarg, Gulmarg. Call +91 9186122235 or +91 9596566858,  email, or request a Kashmir tour quotation on WhatsApp.",
   path: "/contact",
 });
 

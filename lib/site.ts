@@ -28,8 +28,7 @@ export const business = {
     display: "Wahipora, Tangmarg, Gulmarg, Kashmir – 193402, India",
   },
   phones: [
-    { display: "+91 9622566858", e164: "+919622566858" },
-    { display: "+91 9186122235", e164: "+916005399813" },
+    { display: "+91 9186122235", e164: "+919186122235" },
     { display: "+91 9596566858", e164: "+919596566858" },
   ],
   emails: ["shinyadventureskashmir@gmail.com", "shinyadventures49@gmail.com"],
